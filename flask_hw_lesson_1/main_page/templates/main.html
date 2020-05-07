@@ -1,0 +1,24 @@
+{% extends "base.html"%}
+
+{% block content %}
+    <h1 class="title_groceries">List of groceries!</h1>
+    <ul class="list">
+        <li> <button onclick="location.href='{{ url_for('fruits_blueprint.fruits') }}'"
+                     type="button" class="myButton"> Fruits </button>
+        </li>
+        <li> <button onclick="location.href='{{ url_for('vegetables_blueprint.vegetables') }}'"
+                     type="button" class="myButton"> Vegetables </button>
+        </li>
+
+    </ul>
+    <button onclick="location.href='{{ url_for('main_page.redirect_fruits_to_vegetables') }}'"
+            type="button" class="myButton" style="background:purple; background-color:purple">
+            Fruits, but redirected to vegetables
+    </button>
+
+    <button onclick="location.href='{{ url_for('main_page.error_403') }}'"
+            type="button" class="myButton" style="background:darkred; background-color:darkred;">
+            Error 403
+    </button>
+
+{% endblock %}

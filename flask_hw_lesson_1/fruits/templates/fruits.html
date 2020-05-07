@@ -1,0 +1,32 @@
+{% extends "base.html"%}
+
+
+{% block content %}
+    <h1> Fruits </h1>
+    <ul class="fruits">
+        {% for el in list_of_fruits %}
+            <li>{{ el }}</li>
+        {% endfor %}
+    </ul>
+
+    <button onclick="location.href='{{ url_for('main_page.main') }}'"
+                     type="button" class="myButton"> Home page </button>
+
+    {% if request.args.get("name") %}
+        <h1> This fruits belongs to {{ request.args.get("name") }}!</h1>
+    {% endif %}
+
+    <h1>Upload Photo of Fruit</h1>
+    <form method=post enctype=multipart/form-data>
+      <input type=file name=file>
+      <input type=submit value=Upload>
+    </form>
+
+    <div>
+        <h1>Uploaded Photos:</h1>
+        {% for photo in fruit_photos %}
+            <img src="../{{ photo }}" alt="photo">
+        {% endfor %}
+    </div>
+
+{% endblock %}

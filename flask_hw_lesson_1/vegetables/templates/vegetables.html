@@ -1,0 +1,14 @@
+{% extends "base.html"%}
+
+
+{% block content %}
+    <h1> Vegetables </h1>
+    <ul class="vegetable">
+        {% for el in list_of_vegetables %}
+            <li>{{ el }}</li>
+        {% endfor %}
+    </ul>
+
+    <button onclick="location.href='{{ url_for('main_page.main') }}'"
+                 type="button" class="myButton"> Home page </button>
+{% endblock %}
