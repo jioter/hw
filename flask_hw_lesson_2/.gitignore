@@ -1,0 +1,10 @@
+# python files
+.pyc
+# IDE files
+.idea
+__pycache__
+
+env
+venv
+virtualenv
+env_flask_2
