@@ -1,0 +1,8 @@
+<form action="{% url 'create' %}" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+{#    as_p - new line after each form#}
+{#    <input name="title">#}
+{#    <input name="description">#}
+    <button type="submit">Submit</button>
+</form>

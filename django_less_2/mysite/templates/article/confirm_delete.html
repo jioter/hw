@@ -1,0 +1,6 @@
+<form action="." method="post">
+    {% csrf_token %}
+    <p>Are you sure you whant to delete {{ acticle.title }}?</p>
+    <input type="submit" value="Confirm">
+    <buttom> <a href="{% url 'detail' article.id %}">Cancel<a> </buttom>
+</form>
