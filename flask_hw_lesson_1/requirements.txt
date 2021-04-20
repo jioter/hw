@@ -19,7 +19,7 @@ packaging==20.3
 pluggy==0.9.0
 psycopg2==2.8.1
 psycopg2-binary==2.8.2
-py==1.8.0
+py==1.10.0
 pylint==2.4.4
 pyparsing==2.4.7
 pytest==4.4.1
